@@ -1,0 +1,11 @@
+.code-editor__wrapper {
+  padding: $space-x2;
+  .code-editor {
+    padding: $space-x2;
+    border-radius: $space-base;
+
+    &:focus-visible {
+        outline: 2px solid $primary-500;
+    }
+  }
+}

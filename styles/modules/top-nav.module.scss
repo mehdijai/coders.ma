@@ -1,0 +1,38 @@
+.top-nav {
+  ul {
+    // max-width: 1200px;
+    margin: $space-x2;
+    display: flex;
+    align-items: center;
+    background-color: $primary-200_5;
+    border-radius: $space-base;
+    padding: $space-x2 $space-x3;
+    gap: $space-x3;
+
+    li {
+      a {
+        display: block;
+        img {
+          height: 100%;
+          display: block;
+        }
+        span {
+          font-size: 1em;
+          font-weight: 400;
+          transition: opacity 0.2s ease-out;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+
+      &.cta {
+        margin-inline-start: auto;
+        color: $secondary-300;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

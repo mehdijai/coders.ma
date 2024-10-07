@@ -1,0 +1,24 @@
+.button {
+  border: none;
+  padding: $space-base $space-x2;
+  border-radius: $space-xs;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+  font-family: inherit;
+  font-weight: 600;
+  &.variant-primary {
+    background-color: $secondary-200;
+    color: $secondary-600;
+    &:hover {
+      background-color: $secondary-100;
+    }
+  }
+  &.variant-secondary {
+    background-color: transparent;
+    color: $secondary-200;
+    outline: 1px solid currentColor;
+    &:hover {
+      background-color: $secondary-500;
+    }
+  }
+}
