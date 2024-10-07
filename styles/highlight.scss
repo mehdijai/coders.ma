@@ -40,7 +40,6 @@
 .hljs-type,
 .hljs-builtin-name,
 .hljs-number,
-.hljs-meta,
 .hljs-doctag,
 .hljs-selector-id,
 .hljs-selector-class {
@@ -56,4 +55,8 @@
 
 .hljs-built_in {
   color: $code-blue;
+}
+
+.hljs-meta {
+  color: $code-pink;
 }

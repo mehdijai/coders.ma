@@ -11,6 +11,9 @@ hljs.registerLanguage("html", xml);
 
 export function useHighlight() {
   useEffect(() => {
+    document
+      .querySelectorAll("[data-highlighted]")
+      .forEach((el) => el.removeAttribute("data-highlighted"));
     hljs.configure({
       cssSelector: ".code, .code-block",
       languages: ["css", "javascript", "html"],
@@ -32,12 +35,12 @@ export function useHighlight() {
               domEl.childNodes[0].replaceChild(spanEl, node);
             }
           });
-          console.log(domEl);
-
           el.innerHTML = domEl.innerHTML;
         }
       },
     });
     hljs.highlightAll();
   }, []);
+
+  return hljs;
 }
