@@ -18,8 +18,13 @@ export default function TopNav() {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/#features">
             <span>À propos</span>
+          </Link>
+        </li>
+        <li>
+          <Link href="/#partners">
+            <span>Partenaires</span>
           </Link>
         </li>
         <li>

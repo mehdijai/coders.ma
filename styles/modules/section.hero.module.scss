@@ -1,8 +1,8 @@
 .hero-section {
-  flex: 1;
   display: flex;
   padding: $space-x4 $space-x2;
   align-items: center;
+  height: 90vh;
   .description-side {
     flex: 1;
     display: flex;

@@ -5,7 +5,8 @@ import { cn } from "@/lib/utils";
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
   variable: "--font-mono",
 });
 

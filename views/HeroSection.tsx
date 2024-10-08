@@ -46,7 +46,7 @@ export default function HeroSection() {
             &lt;h2 class=&rdquo;subheader&rdquo;&gt;
           </span>
           <span className="subheader">
-            Se développer pour bien{" "}
+            Se développer pour mieux{" "}
             <span className={cn("code language-html", heroSectionStyle["tag"])}>
               &lt;strong&gt;
             </span>
