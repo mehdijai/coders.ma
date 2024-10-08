@@ -35,7 +35,7 @@ export default function HeroSection() {
             &lt;h1 class=&rdquo;headline&rdquo;&gt;
           </span>
           <span className="headline">
-            La formation pratique pour les développeurs de demain.
+            La formation ultime pour les développeurs de demain.
           </span>
           <span className={cn("code language-html", heroSectionStyle["tag"])}>
             &lt;/h1&gt;
@@ -66,9 +66,7 @@ export default function HeroSection() {
         <style ref={styleRef}></style>
       </section>
       <aside className={heroSectionStyle["editor-side"]}>
-        <CodeEditor onCodeChange={setCssCode} lang="css">
-          {cssCode}
-        </CodeEditor>
+        <CodeEditor editable onCodeChange={setCssCode} lang="css" content={cssCode} />
       </aside>
     </section>
   );

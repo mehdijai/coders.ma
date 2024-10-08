@@ -1,11 +1,16 @@
 .code-editor__wrapper {
   padding: $space-x2;
+  &.fit {
+    .code-editor {
+      height: 100%;
+    }
+  }
   .code-editor {
     padding: $space-x2;
     border-radius: $space-base;
 
     &:focus-visible {
-        outline: 2px solid $primary-500;
+      outline: 2px solid $primary-500;
     }
   }
 }

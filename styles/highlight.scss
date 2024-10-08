@@ -1,6 +1,7 @@
 /* Example of tweaks to get closer to One Dark Darker */
 .hljs {
   background: $neutral-black;
+  color: $code-gray;
 }
 
 .hljs-keyword,
@@ -8,7 +9,7 @@
 .hljs-literal,
 .hljs-section,
 .hljs-link {
-  color: #c678dd;
+  color: $code-pink;
 }
 
 .hljs-title,
@@ -21,18 +22,17 @@
   .hljs-attr {
     color: $code-orange;
   }
-  .hljs-string {
-    color: $code-green;
-  }
   .hljs-equals {
     color: $code-blue;
   }
 }
 
-.hljs-variable,
+.hljs-string {
+  color: $code-green;
+}
+
 .hljs-template-variable,
 .hljs-params,
-.hljs-string,
 .hljs-symbol,
 .hljs-bullet,
 .hljs-subst,
@@ -59,4 +59,12 @@
 
 .hljs-meta {
   color: $code-pink;
+}
+
+.is-highlighted {
+  background-color: $secondary-200_10;
+}
+
+.hljs-variable {
+  color: $code-yellow;
 }
