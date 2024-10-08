@@ -28,17 +28,17 @@ export default function TopNav() {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/#formation">
             <span>Formation</span>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/#instructors">
             <span>Formateur</span>
           </Link>
         </li>
         <li className={topNavStyles["cta"]}>
-          <Link href="/">
+          <Link href="/#contact">
             <span>S’inscrire</span>
           </Link>
         </li>

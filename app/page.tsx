@@ -5,6 +5,7 @@ import HeroSection from "@/views/HeroSection";
 import FeaturesSection from "@/views/FeaturesSection";
 import PartnersSection from "@/views/PartnersSection";
 import CourseSection from "@/views/CourseSection";
+import InstructorsSection from "@/views/InstructorsSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <CourseSection />
+      <InstructorsSection />
       <PartnersSection />
     </main>
   );

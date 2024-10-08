@@ -55,7 +55,10 @@ const formationModules = [
     };
   }, []);
   return (
-    <section className={cn(courseSectionStyle["courses-section"])}>
+    <section
+      id="formation"
+      className={cn(courseSectionStyle["courses-section"])}
+    >
       <h3>Notre formation</h3>
       <div
         className={cn(
@@ -76,7 +79,7 @@ const formationModules = [
             )}
           >
             {courseModules.map((courseModule) => (
-              <>
+              <div key={courseModule.moduleTitle}>
                 <div
                   className={cn(
                     "lecture-details",
@@ -85,14 +88,14 @@ const formationModules = [
                   data-title={courseModule.moduleTitle}
                 >
                   {courseModule.lectures.map((lecture) => (
-                    <div>
+                    <div key={lecture.lectureTitle}>
                       <h4>{lecture.lectureTitle}</h4>
                       <p>{lecture.description}</p>
                     </div>
                   ))}
                 </div>
                 <div className="divider" />
-              </>
+              </div>
             ))}
           </div>
           <div

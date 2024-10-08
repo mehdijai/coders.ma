@@ -1,0 +1,99 @@
+.instructors-section {
+  padding: $space-x3 $space-x4;
+  margin-top: $space-x5;
+  display: flex;
+  flex-direction: column;
+  gap: $space-x6;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    text-align: center;
+    color: $neutral-white;
+    font-size: $space-x3;
+    font-weight: 700;
+  }
+
+  .instructors-list {
+    display: flex;
+    justify-content: center;
+    gap: $space-x5;
+
+    .instructors-card {
+      background-color: $primary-500_50;
+      display: flex;
+      flex-direction: column;
+      gap: $space-x2;
+      padding: $space-x3 $space-x2;
+      border-radius: $space-x2;
+      width: 400px;
+      header {
+        display: flex;
+        align-items: center;
+        gap: $space-x2;
+        .instructors-card__image {
+          display: flex;
+          align-items: center;
+          gap: 0;
+          img {
+            border-radius: 50%;
+          }
+          img:last-child {
+            transform: rotateZ(180deg);
+          }
+        }
+        h5 {
+          font-size: $space-x2;
+          color: $secondary-300;
+          font-weight: 700;
+          line-height: 1;
+        }
+      }
+      p {
+        font-size: 1em;
+        color: $neutral-white;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .instructors-stack {
+    display: flex;
+    background-color: $secondary-200_10;
+    border-radius: $space-base;
+    padding: $space-base $space-x2;
+    gap: $space-x2;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        opacity: 0;
+        background-color: $secondary-300;
+        transition: 0.1s ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          bottom: -$space-base;
+        }
+        transform: translateY(-$space-base);
+      }
+      img {
+        height: $space-x3;
+      }
+    }
+  }
+}
