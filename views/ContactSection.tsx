@@ -10,7 +10,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function ContactSection() {
   return (
-    <section className={contactSectionStyle["contact-section"]}>
+    <section id="contact" className={contactSectionStyle["contact-section"]}>
       <h3>
         Inscrivez-vous dès maintenant et lancez votre carrière en tant que
         développeur web !

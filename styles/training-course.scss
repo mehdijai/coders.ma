@@ -1,0 +1,135 @@
+@page {
+  margin: 0;
+  size: A4;
+}
+.tcp-section_model {
+  height: 100vh;
+  padding: $space-x4;
+  @media print {
+    // height: unset;
+    // aspect-ratio: 0.7072135785;
+  }
+}
+.training-course-page {
+  min-height: 100vh;
+  position: relative;
+
+  .back-home {
+    position: fixed;
+    top: $space-base;
+    right: $space-base;
+    background-color: $primary-500_50;
+    backdrop-filter: blur(5px);
+    opacity: 0.2;
+    padding: $space-xs $space-base;
+    border-radius: $space-xs;
+    user-select: none;
+    transition: opacity 0.2s ease-in;
+    font-size: 0.9em;
+
+    @media print {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .print-instruction {
+    position: fixed;
+    top: $space-base;
+    left: $space-base;
+    background-color: $primary-500_50;
+    backdrop-filter: blur(5px);
+    opacity: 0.2;
+    padding: $space-xs $space-base;
+    border-radius: $space-xs;
+    user-select: none;
+    transition: opacity 0.2s ease-in;
+    font-size: 0.9em;
+
+    @media print {
+      display: none;
+    }
+
+    .btn {
+      border: 1px solid $primary-500;
+      padding: $space-base;
+      display: inline-block;
+      border-radius: $space-xs;
+      font-size: 0.9em;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .tcp-cover-page {
+    @extend .tcp-section_model;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: $space-x3;
+    height: 100vh;
+    width: 100%;
+    page-break-inside: avoid;
+    width: 100vw;
+    height: 100vh;
+    page-break-after: always;
+
+    @media print {
+      height: 100vh !important;
+    }
+
+    h1,
+    h2 {
+      max-width: 70%;
+      line-height: 1.5;
+      @media print {
+        max-width: unset;
+      }
+    }
+    h1 {
+      font-size: 2.1em;
+      font-weight: 700;
+      color: $secondary-300;
+    }
+    h2 {
+      font-size: 1.5em;
+      font-weight: 400;
+      color: $neutral-100;
+    }
+    .tcp-symbol {
+      margin: auto 0;
+      font-weight: 700;
+      font-size: 3em;
+      color: $primary-300;
+      @media print {
+        margin: $space-x5 0;
+      }
+    }
+    .tcp-creator {
+      font-weight: 400;
+      font-size: 1em;
+      font-style: italic;
+      .code-block {
+        padding: $space-xs $space-base;
+        border-radius: $space-xs;
+        cursor: pointer;
+        transition: 0.3s ease-in;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .tcp-section {
+    @extend .tcp-section_model;
+  }
+}

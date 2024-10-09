@@ -2,58 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import courseSectionStyle from "@/styles/modules/section.course.module.scss";
 import CodeEditor from "@/components/base/CodeEditor";
 import { courseModules } from "@/data/course-modules";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function CourseSection() {
-  const [intersectedSection, setIntersectedSection] = useState<string>();
-  const modulesCode = `// Nos formations
-
-const formationModules = [
-  "Introduction au Web et outils essentiels",
-  "HTML et CSS pour la création de sites web",
-  "JavaScript et interactivité",
-  "Bases du backend et bases de données",
-  "Projets pratiques et certification",
-];`;
-
-  const getModulesCode = useMemo(
-    () =>
-      modulesCode.replace(`"${intersectedSection}`, `>>"${intersectedSection}`),
-    [intersectedSection]
-  );
-
-  useEffect(() => {
-    const lectures = document.querySelectorAll(".lecture-details");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIntersectedSection(
-              (entry.target as Element).getAttribute("data-title") ?? undefined
-            );
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
-      }
-    );
-
-    lectures.forEach((lecture) => {
-      observer.observe(lecture);
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
   return (
     <section
       id="formation"
@@ -97,14 +48,6 @@ const formationModules = [
                 <div className="divider" />
               </div>
             ))}
-          </div>
-          <div
-            className={cn(
-              "lecture-code",
-              courseSectionStyle["cours-module__code"]
-            )}
-          >
-            <CodeEditor fit lang="javascript" content={getModulesCode} />
           </div>
         </div>
       </div>

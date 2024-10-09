@@ -21,17 +21,6 @@ export default function CodeEditor({
     onCodeChange?.(updatedCode);
   };
 
-  const code = useRef(null);
-  useEffect(() => {
-    document
-      .querySelectorAll("[data-highlighted]")
-      .forEach((el) => el.removeAttribute("data-highlighted"));
-    if (code.current) {
-      (code.current as any).textContent = content;
-      hljs.highlightElement(code.current);
-    }
-  }, [content]);
-
   return (
     <div
       className={cn(codeEditorStyles["code-editor__wrapper"], {
@@ -39,7 +28,6 @@ export default function CodeEditor({
       })}
     >
       <pre
-        ref={code}
         contentEditable={editable}
         suppressContentEditableWarning
         onInput={handleInput}

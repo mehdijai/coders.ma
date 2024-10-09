@@ -4,6 +4,7 @@ import CodeEditor from "@/components/base/CodeEditor";
 import Button from "@/components/base/Button";
 import { cn } from "@/lib/utils";
 import { useHighlight } from "@/hooks/useHighlight";
+import Link from "next/link";
 
 export default function HeroSection() {
   const [cssCode, setCssCode] = useState(`/* style the header. */
@@ -60,13 +61,22 @@ export default function HeroSection() {
           </span>
         </h2>
         <div className={heroSectionStyle["header-cta"]}>
-          <Button>S’inscrire maintenant</Button>
-          <Button variant="secondary">Consulter la formation</Button>
+          <Button>
+            <Link href="/#contact">S’inscrire maintenant</Link>
+          </Button>
+          <Button variant="secondary">
+            <Link href="/formation">Consulter la formation</Link>
+          </Button>
         </div>
         <style ref={styleRef}></style>
       </section>
       <aside className={heroSectionStyle["editor-side"]}>
-        <CodeEditor editable onCodeChange={setCssCode} lang="css" content={cssCode} />
+        <CodeEditor
+          editable
+          onCodeChange={setCssCode}
+          lang="css"
+          content={cssCode}
+        />
       </aside>
     </section>
   );

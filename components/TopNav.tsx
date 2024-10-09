@@ -34,7 +34,7 @@ export default function TopNav() {
         </li>
         <li>
           <Link href="/#instructors">
-            <span>Formateur</span>
+            <span>Formateurs</span>
           </Link>
         </li>
         <li className={topNavStyles["cta"]}>

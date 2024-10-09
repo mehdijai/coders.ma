@@ -21,4 +21,13 @@
       background-color: $secondary-500;
     }
   }
+  &:has(a) {
+    padding: 0;
+  }
+  a {
+    padding: $space-base $space-x2;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
 }
