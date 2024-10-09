@@ -1,0 +1,42 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: $space-x2;
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    border: none;
+    label {
+      font-weight: 600;
+      font-size: 1em;
+    }
+    input {
+      border: none;
+      background-color: $secondary-200_10;
+      padding: $space-x1 $space-x2;
+      border-radius: $space-xs;
+      font-size: 1em;
+      font-family: inherit;
+      color: $neutral-white;
+      outline: none;
+      transition: outline 0.2s ease-in;
+
+      &::placeholder {
+        opacity: 1;
+        color: $neutral-300;
+      }
+
+      &:focus-visible {
+        outline: 3px solid $secondary-200_20;
+      }
+    }
+  }
+  .span-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}

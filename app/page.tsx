@@ -6,6 +6,7 @@ import FeaturesSection from "@/views/FeaturesSection";
 import PartnersSection from "@/views/PartnersSection";
 import CourseSection from "@/views/CourseSection";
 import InstructorsSection from "@/views/InstructorsSection";
+import ContactSection from "@/views/ContactSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <CourseSection />
       <InstructorsSection />
       <PartnersSection />
+      <ContactSection />
     </main>
   );
 }
