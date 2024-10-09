@@ -15,6 +15,7 @@ import dotNetLogo from "@/assets/icons/dotnet.svg";
 import curlyBracket from "@/assets/icons/curly-bracket.svg";
 import Image from "next/image";
 import { instructors } from "@/data/instructors";
+import Link from "next/link";
 
 export default function InstructorsSection() {
   return (
@@ -44,7 +45,27 @@ export default function InstructorsSection() {
               </div>
               <h5>{instructor.name}</h5>
             </header>
-            <p>{instructor.description}</p>
+            <div
+              className={
+                instructorsSectionsStyle["instructors-card__description"]
+              }
+            >
+              <p>{instructor.description}</p>
+              <div
+                className={instructorsSectionsStyle["instructors-card__urls"]}
+              >
+                {instructor.urls?.map((url) => (
+                  <Link
+                    className="ext-link"
+                    target="_blank"
+                    href={url.url}
+                    key={url.label}
+                  >
+                    {url.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         ))}
       </div>

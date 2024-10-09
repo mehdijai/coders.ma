@@ -9,7 +9,7 @@ body {
   background-color: $primary-600;
   color: $neutral-white;
   font-size: 13px;
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-mono), monospace !important;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -57,6 +57,10 @@ a {
   z-index: 10;
   opacity: 0;
 
+  @media print {
+    display: none;
+  }
+
   &.show {
     opacity: 1;
   }
@@ -73,4 +77,12 @@ a {
   width: 100%;
   height: 1px;
   background-color: $primary-500;
+}
+
+.ext-link {
+  color: $secondary-200;
+  text-decoration: underline;
+  &:hover {
+    color: $secondary-300;
+  }
 }

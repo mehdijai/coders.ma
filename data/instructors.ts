@@ -6,6 +6,12 @@ export const instructors = [
             d’expérience dans le développement web. J’ai travaillé sur des
             projets variés dans différents secteurs, et je suis passionné par le
             partage de mes connaissances`,
+    urls: [
+      {
+        label: "Blog",
+        url: "https://mehdijai.hashnode.dev/",
+      },
+    ],
   },
   {
     image: "https://i.pravatar.cc/250?img=68",

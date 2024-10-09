@@ -8,6 +8,7 @@ const robotoMono = Roboto_Mono({
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
   variable: "--font-mono",
+  fallback: ["monospace"],
 });
 
 export const metadata: Metadata = {
