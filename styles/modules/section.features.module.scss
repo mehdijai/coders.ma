@@ -1,22 +1,15 @@
 .features-section {
-  display: flex;
-  flex-direction: column;
-  gap: $space-x3;
-  align-items: center;
-  padding: $space-x4 $space-x3;
-  height: 100vh;
-  justify-content: center;
-  h3 {
-    text-align: center;
-    color: $neutral-white;
-    font-size: $space-x3;
-    font-weight: 700;
-  }
+  @extend .section-base;
   .features-list {
     display: flex;
     justify-content: center;
     gap: $space-base;
     flex-wrap: wrap;
+
+    @include onMobileLg {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
 
     .features-card {
       background-color: $primary-500_50;
@@ -30,6 +23,13 @@
       transition: background 0.3s, outline 0.3s;
       transition-timing-function: ease-in;
       outline: 1px solid transparent;
+
+      @include onTablet {
+        width: 200px;
+      }
+      @include onMobileLg {
+        width: 100%;
+      }
 
       user-select: none;
       &:hover {
@@ -47,6 +47,9 @@
         color: $neutral-white;
         font-weight: 500;
         font-size: $space-x2;
+        @include onTablet {
+          font-size: 1em;
+        }
       }
     }
   }

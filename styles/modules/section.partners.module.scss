@@ -1,18 +1,7 @@
 .partners-section {
-  display: flex;
-  flex-direction: column;
-  gap: $space-x5;
-  align-items: center;
-  padding: $space-x3 $space-x4;
-  justify-content: center;
+  @extend .section-base;
   background-color: $primary-500_50;
-  margin-top: $space-x3;
-  h3 {
-    text-align: center;
-    color: $neutral-white;
-    font-size: $space-x3;
-    font-weight: 700;
-  }
+
   .partners-list {
     display: flex;
     justify-content: center;

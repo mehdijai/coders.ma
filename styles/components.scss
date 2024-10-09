@@ -1,0 +1,25 @@
+.section-base {
+  display: flex;
+  flex-direction: column;
+  gap: $space-x3;
+  align-items: center;
+  padding: $space-x4 $space-x3;
+  height: 100vh;
+  justify-content: center;
+  @include onTablet {
+    height: unset;
+  }
+  @include onMobileLg {
+    padding: $space-x2 $space-x2;
+  }
+  h3 {
+    text-align: center;
+    color: $neutral-white;
+    font-size: $space-x3;
+    font-weight: 700;
+
+    @include onMobileLg {
+      font-size: $space-x2;
+    }
+  }
+}

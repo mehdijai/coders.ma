@@ -4,7 +4,7 @@ const nextConfig = {
   images: { unoptimized: true },
   sassOptions: {
     additionalData: `
-      @import "@/styles/colors.scss", "@/styles/vars.scss";
+      @import "@/styles/colors.scss", "@/styles/vars.scss", "@/styles/mixins/responsive.mixin.scss", "@/styles/components.scss";
     `,
   },
 };

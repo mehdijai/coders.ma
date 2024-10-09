@@ -10,6 +10,11 @@
     gap: $space-x3;
 
     li {
+      @include onMobileLg {
+        &:not(:first-child, :last-child) {
+          display: none;
+        }
+      }
       a {
         display: block;
         img {

@@ -2,6 +2,12 @@
   display: grid;
   grid-template-columns: repeat(2, 250px);
   gap: $space-x2;
+  @include onMobileLg {
+    gap: $space-x3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
   fieldset {
     display: flex;
     flex-direction: column;

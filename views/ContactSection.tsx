@@ -16,9 +16,7 @@ export default function ContactSection() {
         développeur web !
       </h3>
 
-      <div className={contactSectionStyle["contact-form"]}>
-        <ContactForm />
-      </div>
+      <ContactForm />
 
       <span
         className={cn(
