@@ -1,35 +1,31 @@
-"use client";
-
-import { useHighlight } from "@/hooks/useHighlight";
 import React from "react";
 import { BlogBody, BlogHeader } from "../layout";
 import TOC from "@/components/base/TOC";
+import { Metadata } from "next";
+
+const blogHead = {
+  title: "La formation ultime pour les développeurs de demain.",
+  subtitle: `Une formation pratique et concentré, dédié à former les étudiants en
+          mode Entreprise pour développer des solutions informatique qui
+          résoudre des problèmes.`,
+  author: "Mehdi JAI",
+  date: "10/10/2024",
+};
+export const metadata: Metadata = {
+  title: blogHead.title,
+  description: blogHead.subtitle,
+  openGraph: {
+    title: blogHead.title,
+    description: blogHead.subtitle,
+    type: "article",
+    url: "https://coders-ma.pages.dev/blog/formation/",
+  },
+};
 
 export default function TrainingCoursePage() {
-  useHighlight();
-
   return (
     <>
-      <BlogHeader>
-        <h1>La formation ultime pour les développeurs de demain.</h1>
-        <h2>
-          Une formation pratique et concentré, dédié à former les étudiants en
-          mode Entreprise pour développer des solutions informatique qui
-          résoudre des problèmes.
-        </h2>
-
-        <div className="blog-metadata__list">
-          <span className="blog-metadata__item">
-            Créé par:{" "}
-            <span className="code-block language-javascript">"Mehdi JAI"</span>
-          </span>
-          <div className="v-divider" />
-          <span className="blog-metadata__item">
-            Mis à jour le:{" "}
-            <span className="code-block language-javascript">"10/10/2024"</span>
-          </span>
-        </div>
-      </BlogHeader>
+      <BlogHeader {...blogHead} />
       <TOC title="Table des matière" />
       <BlogBody>
         <section>
