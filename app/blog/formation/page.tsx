@@ -1,5 +1,5 @@
 import React from "react";
-import { BlogBody, BlogHeader } from "../layout";
+import { BlogBody, BlogHeader } from "@/components/layout/BlogLayout";
 import TOC from "@/components/base/TOC";
 import { Metadata } from "next";
 
@@ -11,6 +11,7 @@ const blogHead = {
   author: "Mehdi JAI",
   date: "10/10/2024",
 };
+
 export const metadata: Metadata = {
   title: blogHead.title,
   description: blogHead.subtitle,
