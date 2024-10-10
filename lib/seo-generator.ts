@@ -51,3 +51,45 @@ export const metadataBase: Metadata = {
     images: "/cdrs-og.png",
   },
 };
+export const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "coders.ma",
+  alternateName: "coders.ma",
+  url: "https://coders-ma.pages.dev",
+  description:
+    "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+  abstract:
+    "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+  keywords:
+    "coding, dev, web, frontend, backend, fullstack, formation, training, web development, stage, internship, IT work, oujda, IT",
+  author: {
+    "@type": "Person",
+    name: "Mehdi Jai",
+    url: "https://mj-dev.pages.dev",
+  },
+  creator: {
+    "@type": "Organization",
+    name: "Mehdi Jai x Sogesoft FR",
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Mehdi Jai",
+  },
+  inLanguage: "fr-MA",
+  image: {
+    "@type": "ImageObject",
+    url: "https://coders-ma.pages.dev/cdrs-og.png",
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://coders-ma.pages.dev",
+  },
+  sameAs: ["https://twitter.com/jai_mehdi"],
+  about: {
+    "@type": "Thing",
+    name: "Education",
+    description:
+      "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+  },
+};
