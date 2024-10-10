@@ -37,6 +37,13 @@
         outline: 3px solid $secondary-200_20;
       }
     }
+    .error {
+      display: block;
+      color: $accent-300;
+      font-size: 0.8em;
+      font-weight: 700;
+      margin-top: $space-xs;
+    }
   }
   .span-full {
     display: flex;

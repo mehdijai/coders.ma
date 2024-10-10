@@ -6,6 +6,9 @@
   transition: background 0.2s ease-in;
   font-family: inherit;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: $space-base;
   &.variant-primary {
     background-color: $secondary-200;
     color: $secondary-600;
@@ -29,5 +32,14 @@
     display: block;
     height: 100%;
     width: 100%;
+  }
+
+  &:disabled {
+    background-color: $neutral-400;
+    color: $neutral-white;
+    cursor: not-allowed;
+    &:hover {
+      background-color: $neutral-400;
+    }
   }
 }
