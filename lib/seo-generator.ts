@@ -26,7 +26,7 @@ export const metadataBase: Metadata = {
   creator: "Mehdi Jai x Sogesoft FR",
   publisher: "Mehdi Jai",
   robots: "index, follow",
-  manifest: "/manifest.json",
+  manifest: "https://coders-ma.pages.dev/manifest.json",
   openGraph: {
     type: "website",
     title: "coders.ma",
@@ -37,7 +37,7 @@ export const metadataBase: Metadata = {
     locale: "fr_MA",
     countryName: "Morocco",
     url: "coders.ma",
-    images: "/cdrs-og.png",
+    images: "https://coders-ma.pages.dev/cdrs-og.png",
   },
   abstract:
     "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
@@ -48,7 +48,10 @@ export const metadataBase: Metadata = {
     creatorId: "@jai_mehdi",
     description:
       "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
-    images: "/cdrs-og.png",
+    images: "https://coders-ma.pages.dev/cdrs-og.png",
+  },
+  verification: {
+    google: "3I8gdZgFq4WqtsJvt-vkcbO2m240r_LuOFnOtAOamzc",
   },
 };
 export const jsonLd = {
