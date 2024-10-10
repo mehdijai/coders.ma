@@ -38,4 +38,8 @@ ol,
 ul {
   padding-left: 40px;
   margin: 13px 0;
+
+  @include onMobileLg {
+    padding-left: 16px;
+  }
 }

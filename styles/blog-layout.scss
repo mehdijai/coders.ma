@@ -32,6 +32,12 @@
       justify-content: center;
       gap: $space-x3;
       margin-top: $space-x6;
+      @include onMobileLg {
+        .v-divider {
+          display: none;
+        }
+        flex-direction: column;
+      }
       .blog-metadata__item {
         font-weight: 400;
         font-size: 1em;
@@ -55,9 +61,15 @@
   }
   .blog-page__body {
     padding: 0 $space-x4;
+    @include onMobileLg {
+      padding: 0 $space-x2;
+    }
 
     section {
       padding: $space-x4 0;
+      @include onMobileLg {
+        padding: $space-x2 0;
+      }
       border-top: 1px solid $primary-500_50;
       h3 {
         text-align: center;
