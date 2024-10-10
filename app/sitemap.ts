@@ -9,10 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://coders-ma.pages.dev/formation",
+      url: "https://coders-ma.pages.dev/blog/formation",
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
+      changeFrequency: "monthly",
+      priority: 1,
     },
   ];
 }

@@ -65,7 +65,7 @@ export default function HeroSection() {
             <Link href="/#contact">S’inscrire maintenant</Link>
           </Button>
           <Button variant="secondary">
-            <Link href="/formation">Consulter la formation</Link>
+            <Link href="/blog/formation">Consulter la formation</Link>
           </Button>
         </div>
         <style ref={styleRef}></style>

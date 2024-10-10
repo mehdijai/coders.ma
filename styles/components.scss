@@ -4,7 +4,7 @@
   gap: $space-x3;
   align-items: center;
   padding: $space-x4 $space-x3;
-  height: 100vh;
+  // height: 100vh;
   justify-content: center;
   @include onTablet {
     height: unset;
@@ -57,4 +57,73 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $primary-500;
+}
+.v-divider {
+  height: 100%;
+  min-height: $space-x2;
+  width: 2px;
+  background-color: $primary-500;
+}
+
+.ext-link {
+  color: $secondary-200;
+  text-decoration: underline;
+  &:hover {
+    color: $secondary-300;
+  }
+}
+
+.visually-hidden {
+  clip-path: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.to-top-fab {
+  position: fixed;
+  bottom: $space-x2;
+  right: $space-x2;
+  padding: $space-x1;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: $accent-400;
+  cursor: pointer;
+  transition-property: background, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  z-index: 10;
+  opacity: 0;
+
+  @media print {
+    display: none;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+  img {
+    display: block;
+  }
+
+  &:hover {
+    background-color: $accent-500;
+  }
+}
+
+.spacer {
+  flex: 1;
+  margin-inline-end: auto;
+}
+
+.code {
+  background-color: transparent !important;
 }

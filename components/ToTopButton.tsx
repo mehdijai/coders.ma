@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import ArrowUp from "@/assets/icons/arrow-up.svg";
 import Image from "next/image";

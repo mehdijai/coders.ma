@@ -1,4 +1,7 @@
 .top-nav {
+  @media print {
+    display: none;
+  }
   ul {
     // max-width: 1200px;
     margin: $space-x2;

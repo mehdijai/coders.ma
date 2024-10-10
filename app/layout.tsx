@@ -4,6 +4,9 @@ import "./globals.scss";
 import { cn } from "@/lib/utils";
 import { metadataBase } from "@/lib/seo-generator";
 import JsonLd from "@/components/seo/jsonld";
+import TopNav from "@/components/TopNav";
+import ToTopButton from "@/components/ToTopButton";
+import Footer from "@/components/Footer";
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
@@ -23,8 +26,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={cn(robotoMono.variable)}>
+        <ToTopButton />
+        <TopNav />
         {children}
         <JsonLd />
+        <Footer />
       </body>
     </html>
   );

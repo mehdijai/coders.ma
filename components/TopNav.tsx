@@ -28,7 +28,7 @@ export default function TopNav() {
           </Link>
         </li>
         <li>
-          <Link href="/#formation">
+          <Link href="/blog/formation">
             <span>Formation</span>
           </Link>
         </li>
