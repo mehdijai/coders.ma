@@ -8,8 +8,11 @@ import InstructorsSection from "@/views/InstructorsSection";
 import ContactSection from "@/views/ContactSection";
 import LessonsSection from "@/views/LessonsSections";
 import ToTopButton from "@/components/ToTopButton";
+import { useDynamicFavicon } from "@/hooks/useDynamicFavIcon";
 
 export default function Home() {
+  useDynamicFavicon();
+
   return (
     <main className="home-page">
       <ToTopButton />
@@ -18,7 +21,6 @@ export default function Home() {
       <FeaturesSection />
       <PartnersSection />
       <LessonsSection />
-      {/* <CourseSection /> */}
       <InstructorsSection />
       <ContactSection />
     </main>

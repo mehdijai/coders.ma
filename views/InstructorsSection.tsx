@@ -36,9 +36,10 @@ export default function InstructorsSection() {
               >
                 <Image height={32} width={14} alt="" src={curlyBracket} />
                 <Image
+                  aria-label="Picture of Mehdi Jai"
                   height={40}
                   width={40}
-                  alt={`${instructor.image} instructor's profile picture`}
+                  alt={`${instructor.name} instructor's profile picture`}
                   src={instructor.image}
                 />
                 <Image height={32} width={14} alt="" src={curlyBracket} />

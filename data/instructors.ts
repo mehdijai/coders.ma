@@ -1,6 +1,8 @@
+import mjProfilePicture from "@/assets/instractors/mehdi-jai.jpg";
+
 export const instructors = [
   {
-    image: "https://i.pravatar.cc/250?img=68",
+    image: mjProfilePicture,
     name: "Mehdi Jai",
     description: `Expert développeur web senior Full-Stack avec plus de 5 années
             d’expérience dans le développement web. J’ai travaillé sur des

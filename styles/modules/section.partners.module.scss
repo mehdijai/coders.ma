@@ -1,5 +1,6 @@
 .partners-section {
   @extend .section-base;
+  height: fit-content;
   background-color: $primary-500_50;
 
   .partners-list {
