@@ -37,7 +37,15 @@ export const metadataBase: Metadata = {
     locale: "fr_MA",
     countryName: "Morocco",
     url: "coders.ma",
-    images: "https://coders-ma.pages.dev/cdrs-og.png",
+    images: [
+      {
+        url: "https://coders-ma.pages.dev/cdrs-og.png",
+        secureUrl: "https://coders-ma.pages.dev/cdrs-og.png",
+        alt: "Coders.ma | Formation Ultime du Dev",
+        width: 2092,
+        height: 1099,
+      },
+    ],
   },
   abstract:
     "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
