@@ -3,9 +3,9 @@ import { Metadata } from "next";
 export const metadataBase: Metadata = {
   title: "coders.ma",
   description:
-    "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+    "For aspiring developers who want to gain practical, real-world experience.",
   applicationName: "coders.ma",
-  authors: [{ name: "Mehdi Jai", url: "https://mj-dev.pages.dev" }],
+  authors: [{ name: "Mehdi Jai", url: "https://mjdev.pages.dev" }],
   generator: null,
   keywords: [
     "coding",
@@ -31,7 +31,7 @@ export const metadataBase: Metadata = {
     type: "website",
     title: "coders.ma",
     description:
-      "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+      "For aspiring developers who want to gain practical, real-world experience.",
     emails: ["mehdi.jai@proton.me"],
     siteName: "coders.ma",
     locale: "fr_MA",
@@ -48,14 +48,14 @@ export const metadataBase: Metadata = {
     ],
   },
   abstract:
-    "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+    "For aspiring developers who want to gain practical, real-world experience.",
   category: "education",
   twitter: {
     card: "summary_large_image",
     title: "coders.ma",
     creatorId: "@jai_mehdi",
     description:
-      "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+      "For aspiring developers who want to gain practical, real-world experience.",
     images: "https://coders-ma.pages.dev/cdrs-og.png",
   },
   verification: {
@@ -69,15 +69,15 @@ export const jsonLd = {
   alternateName: "coders.ma",
   url: "https://coders-ma.pages.dev",
   description:
-    "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+    "For aspiring developers who want to gain practical, real-world experience.",
   abstract:
-    "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+    "For aspiring developers who want to gain practical, real-world experience.",
   keywords:
     "coding, dev, web, frontend, backend, fullstack, formation, training, web development, stage, internship, IT work, oujda, IT",
   author: {
     "@type": "Person",
     name: "Mehdi Jai",
-    url: "https://mj-dev.pages.dev",
+    url: "https://mjdev.pages.dev",
   },
   creator: {
     "@type": "Organization",
@@ -101,6 +101,6 @@ export const jsonLd = {
     "@type": "Thing",
     name: "Education",
     description:
-      "Une formation ultime, pratique et concentré, dédié à former les étudiants de développer des solutions informatique qui résoudre des problèmes",
+      "For aspiring developers who want to gain practical, real-world experience.",
   },
 };

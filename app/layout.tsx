@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.scss";
 import { cn } from "@/lib/utils";
 import { metadataBase } from "@/lib/seo-generator";
@@ -8,10 +8,10 @@ import TopNav from "@/components/TopNav";
 import ToTopButton from "@/components/ToTopButton";
 import Footer from "@/components/Footer";
 
-const robotoMono = Roboto_Mono({
+const firaCode = Fira_Code({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: ["italic", "normal"],
+  style: ["normal"],
   variable: "--font-mono",
   fallback: ["monospace"],
 });
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={cn(robotoMono.variable)}>
+      <body className={cn(firaCode.variable)}>
         <ToTopButton />
         <TopNav />
         {children}
