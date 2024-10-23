@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Logo from "@/assets/logo-icon-light.svg";
 import topNavStyles from "@/styles/modules/top-nav.module.scss";
+import LanguageSwitcher from "./base/language-switcher";
 
 export default function TopNav() {
   return (
@@ -36,6 +37,10 @@ export default function TopNav() {
           <Link href="/#instructors">
             <span>Formateurs</span>
           </Link>
+        </li>
+        <div className="spacer" />
+        <li>
+          <LanguageSwitcher />
         </li>
         <li className={topNavStyles["cta"]}>
           <Link href="/#contact">

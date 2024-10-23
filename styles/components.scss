@@ -127,3 +127,39 @@
 .code {
   background-color: transparent !important;
 }
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: $space-x1;
+  padding-left: calc(1.5rem + $space-base);
+  position: relative;
+  border-radius: $space-base;
+  background-color: $primary-600;
+  overflow: hidden;
+  label {
+    position: absolute;
+    top: 50%;
+    left: $space-base;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
+  select {
+    margin-left: $space-base;
+    background-color: transparent;
+    padding: $space-base $space-x1;
+    background-color: $primary-600;
+    color: $neutral-white;
+    border: none;
+    cursor: pointer;
+    option:hover {
+      background-color: $primary-500;
+    }
+  }
+}

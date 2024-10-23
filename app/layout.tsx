@@ -7,6 +7,7 @@ import JsonLd from "@/components/seo/jsonld";
 import TopNav from "@/components/TopNav";
 import ToTopButton from "@/components/ToTopButton";
 import Footer from "@/components/Footer";
+import { I18nProvider } from "@/lib/i18n/i18n-context";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -27,10 +28,12 @@ export default function RootLayout({
     <html lang="fr">
       <body className={cn(firaCode.variable)}>
         <ToTopButton />
-        <TopNav />
-        {children}
+        <I18nProvider>
+          <TopNav />
+          {children}
+          <Footer />
+        </I18nProvider>
         <JsonLd />
-        <Footer />
       </body>
     </html>
   );

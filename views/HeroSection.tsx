@@ -5,8 +5,12 @@ import Button from "@/components/base/Button";
 import { cn } from "@/lib/utils";
 import { useHighlight } from "@/hooks/useHighlight";
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n/i18n-context";
+import { Language } from "@/lib/i18n/types";
 
 export default function HeroSection() {
+  const { t } = useI18n();
+
   const [cssCode, setCssCode] = useState(`/* style the header. */
 /* Use the "!important flag" to override. */
 
@@ -35,9 +39,7 @@ export default function HeroSection() {
           <span className={cn("code language-html", heroSectionStyle["tag"])}>
             &lt;h1 class=&rdquo;headline&rdquo;&gt;
           </span>
-          <span className="headline">
-            La formation ultime pour les développeurs de demain.
-          </span>
+          <span className="headline">{t("home.headline")}</span>
           <span className={cn("code language-html", heroSectionStyle["tag"])}>
             &lt;/h1&gt;
           </span>
