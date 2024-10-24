@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { useHighlight } from "@/hooks/useHighlight";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n/i18n-context";
-import { Language } from "@/lib/i18n/types";
 
 export default function HeroSection() {
   const { t } = useI18n();
@@ -14,13 +13,13 @@ export default function HeroSection() {
   const [cssCode, setCssCode] = useState(`/* style the header. */
 /* Use the "!important flag" to override. */
 
-.headline { 
-  color: rgba(134, 204, 252, 1) !important;
+.headline {
+  color: rgba(86, 3, 58, 1) !important;
   font-weight: 600 !important;
 }
 
-.subheader { 
-  color: rgba(214, 214, 214, 1) !important;
+.subheader {
+  color: rgba(102, 102, 102, 1) !important;
   font-weight: 400 !important;
 }`);
 
@@ -49,11 +48,11 @@ export default function HeroSection() {
             &lt;h2 class=&rdquo;subheader&rdquo;&gt;
           </span>
           <span className="subheader">
-            Se développer pour mieux{" "}
+            Develop to better{" "}
             <span className={cn("code language-html", heroSectionStyle["tag"])}>
               &lt;strong&gt;
             </span>
-            <strong>développer</strong>
+            <strong>develop</strong>
             <span className={cn("code language-html", heroSectionStyle["tag"])}>
               &lt;/strong&gt;
             </span>
@@ -64,10 +63,10 @@ export default function HeroSection() {
         </h2>
         <div className={heroSectionStyle["header-cta"]}>
           <Button>
-            <Link href="/#contact">S’inscrire maintenant</Link>
+            <Link href="/#contact">{t("home.cta.join")}</Link>
           </Button>
           <Button variant="secondary">
-            <Link href="/blog/formation">Consulter la formation</Link>
+            <Link href="/blog/formation">{t("home.cta.consult-program")}</Link>
           </Button>
         </div>
         <style ref={styleRef}></style>

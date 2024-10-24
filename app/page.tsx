@@ -5,8 +5,10 @@ import FeaturesSection from "@/views/FeaturesSection";
 import PartnersSection from "@/views/PartnersSection";
 import InstructorsSection from "@/views/InstructorsSection";
 import ContactSection from "@/views/ContactSection";
-import LessonsSection from "@/views/LessonsSections";
+import ProgramsSection from "@/views/LessonsSections";
 import { useDynamicFavicon } from "@/hooks/useDynamicFavIcon";
+import QuoteSection from "@/views/QuoteSection";
+import ActiveProgramsSections from "@/views/ActiveProgramsSection";
 
 export default function Home() {
   useDynamicFavicon();
@@ -16,8 +18,10 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <PartnersSection />
-      <LessonsSection />
+      <ProgramsSection />
+      <QuoteSection />
       <InstructorsSection />
+      <ActiveProgramsSections />
       <ContactSection />
     </main>
   );

@@ -1,12 +1,11 @@
 .partners-section {
   @extend .section-base;
-  height: fit-content;
-  background-color: $primary-500_50;
 
   .partners-list {
     display: flex;
     justify-content: center;
     gap: $space-x5;
+    margin-top: $space-x2;
 
     .partner-item {
       display: flex;
@@ -14,26 +13,29 @@
       align-items: center;
       gap: $space-base;
 
-      opacity: 0.3;
       cursor: pointer;
       user-select: none;
 
       transition: opacity 0.2s ease-in-out;
 
+      img {
+        height: 60px;
+      }
+
       span {
         display: block;
-        font-weight: 400;
-        font-style: italic;
+        font-weight: 500;
         font-size: 1em;
         letter-spacing: 0.3px;
         animation: slide-in 0.4s ease-out 1 forwards;
         opacity: 0;
+        color: $primary-500;
       }
 
       &:hover {
         opacity: 1;
         span {
-          animation: slide-out 0.6s ease-in 1 forwards;
+          animation: slide-out 0.4s ease-out 1 forwards;
         }
       }
     }

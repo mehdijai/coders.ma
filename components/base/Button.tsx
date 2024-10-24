@@ -9,7 +9,7 @@ export default function Button({
   ...props
 }: {
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "alt";
   loading?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (

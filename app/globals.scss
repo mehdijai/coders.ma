@@ -6,10 +6,10 @@
 
 html,
 body {
-  background-color: $primary-600;
-  color: $neutral-white;
+  background-color: $neutral-white;
+  color: $primary-600;
   font-size: 13px;
-  font-family: var(--font-mono), monospace !important;
+  font-family: var(--font-mono), monospace;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

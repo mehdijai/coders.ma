@@ -23,7 +23,7 @@ type I18nContextType = {
 const I18nContext = createContext<I18nContextType | null>(null);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>("fr");
+  const [currentLanguage, setCurrentLanguage] = useState<Language>("en");
 
   useEffect(() => {
     // Try to get language from localStorage or browser preferences
@@ -47,7 +47,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     let value: Object | string = translations[currentLanguage];
 
     for (const k of keys) {
-      value = value[k as keyof typeof value];
+      if (typeof value === "object" && k in value) {
+        value = value[k as keyof typeof value];
+      } else {
+        return key;
+      }
     }
 
     if (params) {
@@ -58,6 +62,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       return translatedText;
     }
 
+    if (!value) return key;
     return value.toString();
   };
 

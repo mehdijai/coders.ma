@@ -1,26 +1,45 @@
+"use client";
+
 import React from "react";
 import featuresSectionStyles from "@/styles/modules/section.features.module.scss";
+import Image from "next/image";
+import { useI18n } from "@/lib/i18n/i18n-context";
 
 export default function FeaturesSection() {
+  const { t } = useI18n();
+
   const features = [
-    "Formation pratique et adaptée aux besoins du marché",
-    "Présentée par des développeurs senior",
-    "“Learn by doing”",
-    "Développer un portfolio avec des projets réels",
-    "Certification en fin de formation",
-    "En partenariat avec des société d'IT",
+    t("home.offers.practical"),
+    t("home.offers.solution-driven"),
+    t("home.offers.high-quality"),
+    t("home.offers.learn-by-doing"),
   ];
   return (
     <section
-      id="features"
+      id="about"
       className={featuresSectionStyles["features-section"]}
     >
-      <h3>Pourquoi notre formation?</h3>
+      <aside>
+        <Image
+          src="/assets/coder.webp"
+          alt="Coder working on his laptop"
+          width={250}
+          height={250}
+        />
+        <p>{t("home.offers.description")}</p>
+      </aside>
+      <h3>{t("home.offers.tagline")}</h3>
       <div className={featuresSectionStyles["features-list"]}>
         {features.map((feature, index) => (
           <div key={index} className={featuresSectionStyles["features-card"]}>
-            <span>&lt;/&gt;</span>
-            <p>{feature}</p>
+            <Image
+              src="/icons/parentheses.svg"
+              alt="parentheses icon"
+              aria-hidden
+              height={25}
+              width={6.82}
+            />
+            <span>{feature}</span>
           </div>
         ))}
       </div>

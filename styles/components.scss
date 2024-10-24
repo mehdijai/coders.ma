@@ -14,12 +14,21 @@
   }
   h3 {
     text-align: center;
-    color: $neutral-white;
-    font-size: $space-x3;
-    font-weight: 700;
+    color: $primary-500;
+    font-size: $space-x2;
+    font-weight: 600;
 
-    @include onMobileLg {
-      font-size: $space-x2;
+    &.title {
+      display: flex;
+      align-items: center;
+      gap: $space-x1;
+      &::after,
+      &::before {
+        content: "";
+        width: 100px;
+        height: 1px;
+        background-color: $secondary-400;
+      }
     }
   }
 }
@@ -135,7 +144,7 @@
   padding-left: calc(1.5rem + $space-base);
   position: relative;
   border-radius: $space-base;
-  background-color: $primary-600;
+  background-color: $secondary-600;
   overflow: hidden;
   label {
     position: absolute;
@@ -152,10 +161,11 @@
   }
   select {
     margin-left: $space-base;
-    background-color: transparent;
     padding: $space-base $space-x1;
-    background-color: $primary-600;
+    background-color: $secondary-600;
     color: $neutral-white;
+    font-size: 1em;
+    font-weight: 600;
     border: none;
     cursor: pointer;
     option:hover {

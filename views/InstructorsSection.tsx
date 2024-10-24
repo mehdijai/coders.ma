@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import instructorsSectionsStyle from "@/styles/modules/section.instructors.module.scss";
 import htmlLogo from "@/assets/icons/html.svg";
@@ -16,14 +18,16 @@ import curlyBracket from "@/assets/icons/curly-bracket.svg";
 import Image from "next/image";
 import { instructors } from "@/data/instructors";
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n/i18n-context";
 
 export default function InstructorsSection() {
+  const { t } = useI18n();
   return (
     <section
       id="instructors"
       className={instructorsSectionsStyle["instructors-section"]}
     >
-      <h3>Nos formateurs</h3>
+      <h3 className={instructorsSectionsStyle["title"]}>{t("home.our-tutors")}</h3>
       <div className={instructorsSectionsStyle["instructors-list"]}>
         {instructors.map((instructor) => (
           <div
@@ -70,42 +74,45 @@ export default function InstructorsSection() {
           </div>
         ))}
       </div>
-      <div className={instructorsSectionsStyle["instructors-stack"]}>
+      <div
+        aria-hidden
+        className={instructorsSectionsStyle["instructors-stack"]}
+      >
         <div>
-          <Image alt="" src={htmlLogo} />
+          <Image alt="html logo" src={htmlLogo} />
         </div>
         <div>
-          <Image alt="" src={cssLogo} />
+          <Image alt="css logo" src={cssLogo} />
         </div>
         <div>
-          <Image alt="" src={jsLogo} />
+          <Image alt="javascript logo" src={jsLogo} />
         </div>
         <div>
-          <Image alt="" src={sassLogo} />
+          <Image alt="sass logo" src={sassLogo} />
         </div>
         <div>
-          <Image alt="" src={tsLogo} />
+          <Image alt="typescript logo" src={tsLogo} />
         </div>
         <div>
-          <Image alt="" src={vueLogo} />
+          <Image alt="vue.js logo" src={vueLogo} />
         </div>
         <div>
-          <Image alt="" src={reactLogo} />
+          <Image alt="react.js logo" src={reactLogo} />
         </div>
         <div>
-          <Image alt="" src={nodeLogo} />
+          <Image alt="nodejs logo" src={nodeLogo} />
         </div>
         <div>
-          <Image alt="" src={expLogo} />
+          <Image alt="express.js logo" src={expLogo} />
         </div>
         <div>
-          <Image alt="" src={nextLogo} />
+          <Image alt="next.js 14 logo" src={nextLogo} />
         </div>
         <div>
-          <Image alt="" src={csLogo} />
+          <Image alt="c# logo" src={csLogo} />
         </div>
         <div>
-          <Image alt="" src={dotNetLogo} />
+          <Image alt=".net logo" src={dotNetLogo} />
         </div>
       </div>
     </section>

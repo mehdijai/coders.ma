@@ -1,32 +1,35 @@
 .contact-section {
-  @extend .section-base;
-  padding: $space-x4 $space-x3;
+  padding: $space-x6 $space-x10;
   margin-top: $space-x5;
   gap: $space-x6;
+  background-color: $secondary-500;
+  color: $neutral-white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 
   @include onMobileLg {
     margin-top: 0;
+    padding: $space-x4 $space-x3;
+    flex-direction: column;
+    gap: $space-x4;
   }
+
+  main,
+  aside {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: $space-x5;
+    flex-direction: column;
+  }
+
   h3 {
     font-size: $space-x2;
-    max-width: 60%;
-
-    @include onMobileLg {
-      max-width: unset;
-    }
+    max-width: 80%;
+    text-align: center;
   }
 
-  .contact_or-tag {
-    font-weight: 700;
-    font-size: $space-x2;
-    margin: $space-x2 0;
-
-    @include onMobileLg {
-      margin: 0;
-    }
-  }
-
-  .contacts_info,
   .contacts_social-media {
     display: flex;
     align-items: center;
@@ -51,18 +54,26 @@
     }
   }
 
-  .contacts_info span {
-    font-size: 1em;
-    color: $neutral-200;
-    font-weight: 400;
-    transition: 0.3s ease-in-out;
+  .contacts_info {
+    display: flex;
+    flex-direction: column;
+    gap: $space-x2;
+    span {
+      display: block;
+      text-align: center;
+      font-size: 1em;
+      color: $secondary-200;
+      font-weight: 400;
+      transition: 0.3s ease-in-out;
+      cursor: default;
 
-    a {
-      cursor: text;
-    }
+      a {
+        cursor: text;
+      }
 
-    &:hover {
-      color: $neutral-white;
+      &:hover {
+        color: $neutral-white;
+      }
     }
   }
 }

@@ -1,10 +1,10 @@
 $card-width: 420px;
 $card-width_sm: 320px;
-.instructors-section {
+.active-program-section {
   @extend .section-base;
   gap: $space-x10;
 
-  .instructors-list {
+  .active-program-list {
     display: flex;
     justify-content: center;
     gap: $space-x5;
@@ -14,7 +14,7 @@ $card-width_sm: 320px;
       flex-wrap: wrap;
     }
 
-    .instructors-card {
+    .active-program-card {
       background-color: $secondary-500;
       display: flex;
       flex-direction: column;
@@ -27,34 +27,24 @@ $card-width_sm: 320px;
       }
       header {
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: $space-x2;
-        .instructors-card__image {
-          display: flex;
-          align-items: center;
-          gap: 0;
-          img {
-            border-radius: 50%;
-          }
-          img:last-child {
-            transform: rotateZ(180deg);
-          }
-        }
         h5 {
           font-size: $space-x2;
           color: $secondary-100;
           font-weight: 700;
           line-height: 1;
+          text-align: center;
         }
       }
-      .instructors-card__description {
+      .active-program-card__description {
         p {
           font-size: 1em;
           color: $neutral-white;
           font-weight: 400;
           line-height: 1.5;
         }
-        .instructors-card__urls {
+        .active-program-card__urls {
           display: flex;
           align-items: center;
           margin-top: $space-base;
@@ -68,7 +58,7 @@ $card-width_sm: 320px;
     }
   }
 
-  .instructors-stack {
+  .active-program-stack {
     display: flex;
     background-color: $primary-500;
     border-radius: $space-base;

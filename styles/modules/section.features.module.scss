@@ -1,55 +1,68 @@
 .features-section {
   @extend .section-base;
+
+  h3 {
+    margin: $space-x3 0;
+  }
+
+  aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-x4;
+    max-width: 900px;
+
+    img {
+      height: 200px;
+      width: auto;
+    }
+    p {
+      font-weight: 500;
+      font-size: 2rem;
+      color: $secondary-400;
+      font-style: italic;
+      font-family: var(--font-sans), sans-serif;
+    }
+    @include onMobileLg() {
+      flex-direction: column;
+      p {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
   .features-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: $space-base;
     flex-wrap: wrap;
+    width: 90%;
+    max-width: 900px;
 
-    @include onMobileLg {
+    &.grid {
       display: grid;
       grid-template-columns: 50% 50%;
+      width: 40%;
+
+      @include onMobileLg() {
+        width: unset;
+      }
     }
+    // @include onMobileLg {
+    //   display: grid;
+    //   grid-template-columns: 50% 50%;
+    // }
 
     .features-card {
-      background-color: $primary-500_50;
-      padding: $space-x4 $space-x2;
-      border-radius: $space-xs;
       display: flex;
-      flex-direction: column;
-      gap: $space-x2;
-      text-align: center;
-      width: 300px;
-      transition: background 0.3s, outline 0.3s;
-      transition-timing-function: ease-in;
-      outline: 1px solid transparent;
-
-      @include onTablet {
-        width: 200px;
-      }
-      @include onMobileLg {
-        width: 100%;
-      }
-
-      user-select: none;
-      &:hover {
-        outline-color: $primary-500_50;
-        background-color: $primary-500_5;
-      }
+      align-items: center;
+      gap: $space-x1;
 
       span {
-        color: $secondary-300;
-        font-weight: 700;
-        font-size: $space-x3;
-      }
-      p {
-        margin: auto 0;
-        color: $neutral-white;
-        font-weight: 500;
+        display: block;
+        color: $secondary-400;
+        font-weight: 400;
         font-size: $space-x2;
-        @include onTablet {
-          font-size: 1em;
-        }
       }
     }
   }

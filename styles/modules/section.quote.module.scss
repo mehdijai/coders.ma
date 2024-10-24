@@ -1,0 +1,46 @@
+.quote-section {
+  background-color: $secondary-500;
+  display: flex;
+  align-items: center;
+  padding: 0 $space-x4;
+  position: relative;
+  margin: $space-x4 0;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: $space-x4;
+    height: 90%;
+    width: auto;
+    mix-blend-mode: color-dodge;
+    opacity: 0.2;
+    transform: translateY(-50%);
+  }
+  .image {
+    height: 400px;
+    width: auto;
+  }
+  p {
+    color: $neutral-white;
+    font-weight: 600;
+    padding: $space-x4;
+    line-height: 1.5;
+    max-width: 50%;
+    font-size: 1.3rem;
+  }
+  @include onMobileLg() {
+    flex-direction: column;
+    padding: 0;
+    padding-top: $space-x2;
+    .icon {
+      display: none;
+    }
+    .image {
+      width: 100%;
+      height: auto;
+    }
+    p {
+      max-width: unset;
+    }
+  }
+}

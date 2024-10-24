@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
+import { Fira_Code, Inter } from "next/font/google";
 import "./globals.scss";
 import { cn } from "@/lib/utils";
 import { metadataBase } from "@/lib/seo-generator";
@@ -17,6 +17,14 @@ const firaCode = Fira_Code({
   fallback: ["monospace"],
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["500"],
+  style: ["italic"],
+  variable: "--font-sans",
+  fallback: ["sans-serif"],
+});
+
 export const metadata: Metadata = metadataBase;
 
 export default function RootLayout({
@@ -25,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={cn(firaCode.variable)}>
+    <html lang="en">
+      <body className={cn(firaCode.variable, inter.variable)}>
         <ToTopButton />
         <I18nProvider>
           <TopNav />

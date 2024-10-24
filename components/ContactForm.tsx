@@ -1,10 +1,15 @@
+"use client";
+
 import React, { useState } from "react";
 import "@/styles/form.scss";
 import Button from "./base/Button";
 import { Validator } from "@/lib/validator";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/lib/i18n/i18n-context";
 
 export default function ContactForm() {
+  const { t } = useI18n();
+
   const [response, setResponse] = useState<{
     status: "error" | "success";
     message: string;
@@ -32,7 +37,10 @@ export default function ContactForm() {
 
   function validateForm(): boolean {
     if (formBody.email === "" || !Validator.validateEmail(formBody.email)) {
-      setError((prev) => ({ ...prev, email: "Email invalide" }));
+      setError((prev) => ({
+        ...prev,
+        email: t("contact.form.messages.email.invalid"),
+      }));
       return false;
     }
 
@@ -42,7 +50,7 @@ export default function ContactForm() {
     ) {
       setError((prev) => ({
         ...prev,
-        phone: "Téléphone invalide: +2126xxxxxxxx OU 06xxxxxxxx",
+        phone: t("contact.form.messages.phone.invalid"),
       }));
       return false;
     }
@@ -51,7 +59,10 @@ export default function ContactForm() {
       formBody.name === "" ||
       !Validator.validateMinLength(formBody.name, 3)
     ) {
-      setError((prev) => ({ ...prev, name: "Nom invalide" }));
+      setError((prev) => ({
+        ...prev,
+        name: t("contact.form.messages.name.invalid", { min: "3" }),
+      }));
       return false;
     }
 
@@ -59,7 +70,10 @@ export default function ContactForm() {
       formBody.level === "" ||
       !Validator.validateMinLength(formBody.level, 3)
     ) {
-      setError((prev) => ({ ...prev, level: "Niveau invalide" }));
+      setError((prev) => ({
+        ...prev,
+        level: t("contact.form.messages.level.invalid", { min: "3" }),
+      }));
       return false;
     }
 
@@ -96,7 +110,7 @@ export default function ContactForm() {
         if (response.status === 409) {
           setResponse({
             status: "error",
-            message: "Cet email existe déjà",
+            message: t("contact.form.messages.email.existing"),
           });
         } else if (response.status === 200) {
           setFormBody({
@@ -107,12 +121,12 @@ export default function ContactForm() {
           });
           setResponse({
             status: "success",
-            message: "Merci pour votre inscription",
+            message: t("contact.form.messages.success"),
           });
         } else {
           setResponse({
             status: "error",
-            message: "Une erreur est survenue",
+            message: t("contact.form.messages.error"),
           });
         }
       })
@@ -120,7 +134,7 @@ export default function ContactForm() {
         if (error.status === 409) {
           setResponse({
             status: "error",
-            message: "Cet email existe déjà",
+            message: t("contact.form.messages.email.existing"),
           });
         }
         if (error.name === "AbortError") {
@@ -128,7 +142,7 @@ export default function ContactForm() {
         } else {
           setResponse({
             status: "error",
-            message: "Une erreur est survenue",
+            message: t("contact.form.messages.error"),
           });
         }
       })
@@ -142,7 +156,7 @@ export default function ContactForm() {
         </div>
       )}
       <fieldset>
-        <label htmlFor="name">Nom</label>
+        <label htmlFor="name">{t("contact.form.name.label")}</label>
         <input
           value={formBody.name}
           onChange={(e) => setFormBody({ ...formBody, name: e.target.value })}
@@ -151,12 +165,12 @@ export default function ContactForm() {
           name="name"
           id="name"
           required
-          placeholder="Votre nom"
+          placeholder={t("contact.form.name.placeholder")}
         />
         {error.name && <span className="error">{error.name}</span>}
       </fieldset>
       <fieldset>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">{t("contact.form.email.label")}</label>
         <input
           value={formBody.email}
           onChange={(e) => setFormBody({ ...formBody, email: e.target.value })}
@@ -165,12 +179,12 @@ export default function ContactForm() {
           name="email"
           id="email"
           required
-          placeholder="Votre address email"
+          placeholder={t("contact.form.email.placeholder")}
         />
         {error.email && <span className="error">{error.email}</span>}
       </fieldset>
       <fieldset>
-        <label htmlFor="phone">Téléphone</label>
+        <label htmlFor="phone">{t("contact.form.phone.label")}</label>
         <input
           value={formBody.phone}
           onChange={(e) => setFormBody({ ...formBody, phone: e.target.value })}
@@ -179,12 +193,12 @@ export default function ContactForm() {
           name="phone"
           id="phone"
           required
-          placeholder="Votre N° de téléphone"
+          placeholder={t("contact.form.phone.placeholder")}
         />
         {error.phone && <span className="error">{error.phone}</span>}
       </fieldset>
       <fieldset>
-        <label htmlFor="level">Niveau</label>
+        <label htmlFor="level">{t("contact.form.level.label")}</label>
         <input
           value={formBody.level}
           onChange={(e) => setFormBody({ ...formBody, level: e.target.value })}
@@ -193,12 +207,14 @@ export default function ContactForm() {
           name="level"
           id="level"
           required
-          placeholder="Votre niveau d’étude"
+          placeholder={t("contact.form.level.placeholder")}
         />
         {error.level && <span className="error">{error.level}</span>}
       </fieldset>
       <div className="span-full">
-        <Button loading={submitting}>S’inscrire maintenant</Button>
+        <Button loading={submitting} variant="alt">
+          {t("contact.form.submitButtonLabel")}
+        </Button>
       </div>
     </form>
   );
