@@ -6,4 +6,4 @@
 - [ ] Add Formations Pages
 - [ ] Add QA program
 - [ ] Add Junior Dev Program
-- [ ] Loader
+- [x] Loader

@@ -1,0 +1,27 @@
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $neutral-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+
+  svg {
+    width: 100px;
+    height: auto;
+
+    #dot {
+      opacity: 0;
+    }
+    #c {
+      opacity: 0;
+      transform-origin: 37px center;
+    }
+    #edge {
+      opacity: 0;
+    }
+  }
+}

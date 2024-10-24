@@ -8,6 +8,7 @@ import TopNav from "@/components/TopNav";
 import ToTopButton from "@/components/ToTopButton";
 import Footer from "@/components/Footer";
 import { I18nProvider } from "@/lib/i18n/i18n-context";
+import Loader from "@/components/base/Loader";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(firaCode.variable, inter.variable)}>
         <ToTopButton />
+        <Loader />
         <I18nProvider>
           <TopNav />
           {children}
