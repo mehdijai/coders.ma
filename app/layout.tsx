@@ -20,10 +20,10 @@ const firaCode = Fira_Code({
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["500"],
-  style: ["italic"],
+  weight: ["500", "700"],
+  style: ["italic", "normal"],
   variable: "--font-sans",
-  fallback: ["sans-serif"],
+  // fallback: ["sans-serif"],
 });
 
 export const metadata: Metadata = metadataBase;

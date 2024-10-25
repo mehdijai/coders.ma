@@ -16,6 +16,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  scroll-padding-block-start: 1rem;
+
   scroll-behavior: smooth;
 }
 
@@ -36,10 +38,27 @@ a {
 
 ol,
 ul {
-  padding-left: 40px;
-  margin: 13px 0;
+  // padding-left: 40px;
+  // margin: 13px 0;
 
   @include onMobileLg {
     padding-left: 16px;
+  }
+}
+
+.not-found {
+  height: calc(100vh - 64px - 16px - 16px - 56px - 16px - 16px);
+  background-color: $neutral-white;
+  color: $secondary-500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $space-x3;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
   }
 }

@@ -1,7 +1,8 @@
 .blog-page {
   .blog-page__header {
     width: 100%;
-    background-color: $primary-500_50;
+    // background-color: $neutral-100;
+    border-bottom: 1px solid $neutral-100;
     padding: $space-x6 $space-x4;
     text-align: center;
     display: flex;
@@ -18,12 +19,17 @@
     h1 {
       font-size: 2.1em;
       font-weight: 700;
-      color: $secondary-300;
+      color: $secondary-400;
     }
     h2 {
-      font-size: 1.5em;
+      font-size: 1.4em;
       font-weight: 400;
-      color: $neutral-100;
+      line-height: 1.5;
+      color: $primary-500;
+      max-width: 60%;
+      @include onMobileLg {
+        max-width: unset;
+      }
     }
 
     .blog-metadata__list {
@@ -60,33 +66,53 @@
     }
   }
   .blog-page__body {
+    margin: 0 auto;
     padding: 0 $space-x4;
+    max-width: 60%;
     @include onMobileLg {
       padding: 0 $space-x2;
     }
+    counter-reset: section;
 
     section {
       padding: $space-x4 0;
       @include onMobileLg {
         padding: $space-x2 0;
       }
-      border-top: 1px solid $primary-500_50;
+      // border-top: 1px solid $primary-500_50;
       h3 {
         text-align: center;
         margin-bottom: $space-x4;
-        text-decoration: underline;
-        color: $secondary-200;
+        font-weight: 700;
+        font-size: 1.3rem;
+        font-family: var(--font-sans);
+        &::before {
+          counter-increment: section;
+          content: counter(section) ": ";
+        }
+        color: $primary-400;
+      }
+      p {
+        color: $neutral-black;
+        line-height: 1.5;
+        font-weight: 400;
       }
       ol > li {
         page-break-inside: avoid;
+        color: $secondary-300;
         h4 {
           line-height: 2;
           font-size: 1.2em;
-          color: $primary-200;
+          font-family: var(--font-sans);
         }
-        p {
-          line-height: 1.5;
-          font-weight: 400;
+        ol {
+          margin-inline-start: $space-x3;
+          list-style-type: lower-alpha;
+          li {
+            color: $neutral-black;
+            line-height: 1.5;
+            font-weight: 400;
+          }
         }
       }
     }
@@ -135,26 +161,22 @@
 }
 
 .tcp-toc {
-  background-color: $primary-500_50;
+  background-color: $neutral-100;
   padding: $space-x4 $space-x3;
-
-  h2 {
-    text-align: center;
-    margin-bottom: $space-x4;
-  }
+  border-radius: $space-base;
 
   .toc-list {
     list-style-type: none;
     padding: 0;
     line-height: 1.6;
-    color: $neutral-100;
-    font-weight: 400;
+    color: $primary-600;
+    font-weight: 300;
     ol {
       list-style-type: none;
       padding-inline-start: 2ch;
     }
     & > li > a {
-      font-weight: 700;
+      font-weight: 600;
       margin-block-start: 1em;
       line-height: 2.2;
     }
@@ -171,6 +193,7 @@
       .leaders::after {
         position: absolute;
         padding-inline-start: 0.25ch;
+        font-weight: 400;
         content: " . . . . . . . . . . . . . . . . . . . "
           ". . . . . . . . . . . . . . . . . . . . . . . "
           ". . . . . . . . . . . . . . . . . . . . . . . "

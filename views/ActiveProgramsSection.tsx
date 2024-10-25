@@ -4,9 +4,10 @@ import React from "react";
 import activeProgramsSectionsStyle from "@/styles/modules/section.active-programs.module.scss";
 import { useI18n } from "@/lib/i18n/i18n-context";
 import { programs } from "@/data/programs";
+import Link from "next/link";
 
 export default function ActiveProgramsSections() {
-  const { t } = useI18n();
+  const { t, currentLanguage } = useI18n();
   return (
     <section
       id="active-programs"
@@ -29,7 +30,20 @@ export default function ActiveProgramsSections() {
                 activeProgramsSectionsStyle["active-program-card__description"]
               }
             >
-              <p>{program.description}</p>
+              <p>
+                {currentLanguage === "fr"
+                  ? program.descriptionFr
+                  : program.description}
+              </p>
+              <div
+                className={
+                  activeProgramsSectionsStyle["active-program-card__urls"]
+                }
+              >
+                <Link href={program.link + currentLanguage}>
+                  {t("nav.more")}
+                </Link>
+              </div>
             </div>
           </div>
         ))}

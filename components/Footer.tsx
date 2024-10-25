@@ -10,20 +10,22 @@ export default function Footer() {
   const { t } = useI18n();
   return (
     <footer className={footerStyles["footer"]}>
-      <Link href="/">
-        <Image
-          height={33}
-          width={47}
-          src="/logo-icon-light.svg"
-          alt={t("common.description")}
-        />
-      </Link>
-      <p>
-        © Coders.ma {new Date().getFullYear()} | Designed & Developed By{" "}
-        <Link href="https://mjdev.pages.dev" className="ext-link">
-          Mehdi Jai
+      <div className={footerStyles["content"]}>
+        <Link href="/">
+          <Image
+            height={33}
+            width={47}
+            src="/logo-icon-light.svg"
+            alt={t("common.description")}
+          />
         </Link>
-      </p>
+        <p>
+          © Coders.ma {new Date().getFullYear()} | Designed & Developed By{" "}
+          <Link href="https://mjdev.pages.dev" className="ext-link">
+            Mehdi Jai
+          </Link>
+        </p>
+      </div>
     </footer>
   );
 }

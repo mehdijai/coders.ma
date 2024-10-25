@@ -90,4 +90,8 @@ export const en = {
       },
     },
   },
+  blog: {
+    createdBy: "Created By",
+    updatedAt: "Updated At",
+  },
 };

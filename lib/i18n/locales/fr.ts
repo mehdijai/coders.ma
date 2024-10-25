@@ -91,4 +91,8 @@ export const fr = {
       },
     },
   },
+  blog: {
+    createdBy: "Créé par",
+    updatedAt: "Mis à jour le",
+  },
 };

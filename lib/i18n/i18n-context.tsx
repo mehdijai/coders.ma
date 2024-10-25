@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { en } from "./locales/en";
 import { fr } from "./locales/fr";
 import { Language } from "./types";
+import eventBus from "../eventBus";
 
 const translations = { en, fr } as Record<string, Object | string>;
 
@@ -39,6 +40,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const setLanguage = (lang: Language) => {
     setCurrentLanguage(lang);
+    eventBus.emit("language-updated", lang);
     localStorage.setItem("language", lang);
   };
 

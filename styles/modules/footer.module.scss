@@ -1,31 +1,32 @@
 .footer {
-  margin: $space-x2;
-  margin-top: $space-x4;
-  background-color: $secondary-500;
-  border-radius: $space-base;
-  padding: $space-x2 $space-x3;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  gap: $space-x2;
-  color: $neutral-white;
-
-  img {
-    height: 20px;
-    width: auto;
-  }
-
-  p {
+  padding: $space-x2;
+  .content {
+    background-color: $secondary-500;
+    border-radius: $space-base;
+    padding: $space-x2 $space-x3;
     display: flex;
-    align-items: center;
-    gap: 1ch;
-  }
+    align-content: center;
+    justify-content: center;
+    gap: $space-x2;
+    color: $neutral-white;
 
-  @include onMobileLg() {
-    align-items: center;
-    flex-direction: column;
+    img {
+      height: 20px;
+      width: auto;
+    }
+
     p {
+      display: flex;
+      align-items: center;
+      gap: 1ch;
+    }
+
+    @include onMobileLg() {
+      align-items: center;
       flex-direction: column;
+      p {
+        flex-direction: column;
+      }
     }
   }
 }
