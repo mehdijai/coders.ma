@@ -66,7 +66,7 @@ export default function HeroSection() {
             <Link href="/#contact">{t("home.cta.join")}</Link>
           </Button>
           <Button variant="secondary">
-            <Link href="/blog/formation">{t("home.cta.consult-program")}</Link>
+            <Link href="/#active-programs">{t("home.cta.consult-program")}</Link>
           </Button>
         </div>
         <style ref={styleRef}></style>

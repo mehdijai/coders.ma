@@ -70,7 +70,8 @@
     padding: 0 $space-x4;
     max-width: 60%;
     @include onMobileLg {
-      padding: 0 $space-x2;
+      max-width: unset;
+      padding: 0 $space-x3;
     }
     counter-reset: section;
 
@@ -80,6 +81,16 @@
         padding: $space-x2 0;
       }
       // border-top: 1px solid $primary-500_50;
+      ul {
+        list-style: "- ";
+      }
+      ul,
+      ol {
+        margin: $space-x1 0;
+        li {
+          margin: $space-base 0;
+        }
+      }
       h3 {
         text-align: center;
         margin-bottom: $space-x4;
@@ -96,8 +107,17 @@
         color: $neutral-black;
         line-height: 1.5;
         font-weight: 400;
+        @include onMobileLg {
+          line-height: 1.8;
+          font-size: 1.2em;
+        }
       }
-      ol > li {
+      ol,
+      ul > li {
+        @include onMobileLg {
+          line-height: 1.8;
+          font-size: 1.2em;
+        }
         page-break-inside: avoid;
         color: $secondary-300;
         h4 {
@@ -105,13 +125,18 @@
           font-size: 1.2em;
           font-family: var(--font-sans);
         }
-        ol {
+        ol,
+        ul {
           margin-inline-start: $space-x3;
           list-style-type: lower-alpha;
           li {
             color: $neutral-black;
             line-height: 1.5;
             font-weight: 400;
+            @include onMobileLg {
+              line-height: 1.8;
+              font-size: 1.2em;
+            }
           }
         }
       }

@@ -13,6 +13,7 @@ export const fr = {
     contact: "Contact",
     subscribe: "S’inscrire",
     more: "Plus d'infos",
+    manifesto: "Notre Manifeste",
   },
   home: {
     headline: "On construis les tech leaders du futur.",

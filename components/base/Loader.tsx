@@ -204,8 +204,8 @@ export default function Loader() {
           id="light"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M91.2769 3.53625C96.7996 12.9991 99.9999 24.0152 99.9999 35.7669C99.9999 47.4169 96.8659 58.3711 91.4018 67.7799L83.4155 63.1637C88.0867 55.1201 90.77 45.753 90.77 35.7669C90.77 25.7032 88.0331 16.2786 83.3005 8.1695L91.2769 3.53625Z"
           fill="#0D4266"
           id="edge"
@@ -229,12 +229,12 @@ export default function Loader() {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(57.2421 34.665) scale(74.9721 74.9585)"
           >
-            <stop offset="0" stop-color="#0D4266" stop-opacity="0.2" />
+            <stop offset="0" stopColor="#0D4266" stopOpacity="0.2" />
             <stop
               id="light-end"
               offset="0.70"
-              stop-color="#0D4266"
-              stop-opacity="0"
+              stopColor="#0D4266"
+              stopOpacity="0"
             />
           </radialGradient>
         </defs>

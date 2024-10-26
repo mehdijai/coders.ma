@@ -9,7 +9,7 @@ import LanguageSwitcher from "./base/language-switcher";
 import { useI18n } from "@/lib/i18n/i18n-context";
 
 export default function TopNav() {
-  const { t } = useI18n();
+  const { t, currentLanguage } = useI18n();
   return (
     <nav className={topNavStyles["top-nav"]}>
       <ul>
@@ -39,8 +39,8 @@ export default function TopNav() {
           </Link>
         </li>
         <li>
-          <Link href="/blog/manifesto">
-            <span>{t("nav.more")}</span>
+          <Link href={"/manifesto"}>
+            <span>{t("nav.manifesto")}</span>
           </Link>
         </li>
         <div className="spacer" />

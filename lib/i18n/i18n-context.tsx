@@ -24,7 +24,9 @@ type I18nContextType = {
 const I18nContext = createContext<I18nContextType | null>(null);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>("en");
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(
+    (localStorage.getItem("language") as Language) ?? "en"
+  );
 
   useEffect(() => {
     // Try to get language from localStorage or browser preferences

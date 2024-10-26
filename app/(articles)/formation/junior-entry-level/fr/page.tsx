@@ -19,10 +19,11 @@ export const metadata: Metadata = {
     title: blogHead.title,
     description: blogHead.subtitle,
     type: "article",
-    url: "https://coders-ma.pages.dev/blog/formation/junior-entry-level/fr",
+    url: "https://coders-ma.pages.dev/formation/junior-entry-level/fr",
     alternateLocale: [
-      "https://coders-ma.pages.dev/blog/formation/junior-entry-level/en",
-      "https://coders-ma.pages.dev/blog/formation/junior-entry-level/fr",
+      "https://coders-ma.pages.dev/formation/junior-entry-level/en",
+      "https://coders-ma.pages.dev/formation/junior-entry-level/fr",
+      "https://coders-ma.pages.dev/formation/junior-entry-level",
     ],
   },
 };

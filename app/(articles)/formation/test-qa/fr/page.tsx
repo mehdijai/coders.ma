@@ -19,10 +19,11 @@ export const metadata: Metadata = {
     title: blogHead.title,
     description: blogHead.subtitle,
     type: "article",
-    url: "https://coders-ma.pages.dev/blog/formation/test-qa/fr",
+    url: "https://coders-ma.pages.dev/formation/test-qa/fr",
     alternateLocale: [
-      "https://coders-ma.pages.dev/blog/formation/test-qa/en",
-      "https://coders-ma.pages.dev/blog/formation/test-qa/fr",
+      "https://coders-ma.pages.dev/formation/test-qa/en",
+      "https://coders-ma.pages.dev/formation/test-qa/fr",
+      "https://coders-ma.pages.dev/formation/test-qa",
     ],
   },
 };

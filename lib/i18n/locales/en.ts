@@ -13,6 +13,7 @@ export const en = {
     contact: "Contact",
     subscribe: "Join us",
     more: "Learn more",
+    manifesto: "Our Manifesto",
   },
   home: {
     headline: "We build the future's Tech Leaders.",

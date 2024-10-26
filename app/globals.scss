@@ -47,7 +47,8 @@ ul {
 }
 
 .not-found {
-  height: calc(100vh - 64px - 16px - 16px - 56px - 16px - 16px);
+  /* full-height - navbar - footer - (padding * 4) */
+  height: calc(100vh - 64px - 56px - (16px * 4));
   background-color: $neutral-white;
   color: $secondary-500;
   display: flex;
@@ -61,4 +62,13 @@ ul {
     font-weight: 700;
     text-align: center;
   }
+}
+
+blockquote {
+  border-left: 5px solid $primary-300;
+  margin-top: $space-x2;
+  padding: $space-x1 $space-x2;
+  background-color: $primary-100;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
