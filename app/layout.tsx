@@ -9,6 +9,7 @@ import ToTopButton from "@/components/ToTopButton";
 import Footer from "@/components/Footer";
 import { I18nProvider } from "@/lib/i18n/i18n-context";
 import Loader from "@/components/base/Loader";
+import Script from "next/script";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -44,6 +45,12 @@ export default function RootLayout({
           <Footer />
         </I18nProvider>
         <JsonLd />
+        <Script
+          strategy="beforeInteractive"
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="d5056b32-3c52-48a4-8479-60ec320dd503"
+        ></Script>
       </body>
     </html>
   );
